@@ -1,0 +1,795 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* COLORS */
+  --rtc-color-1: #000000;
+  --rtc-color-2: #141615;
+  --rtc-color-3: #EEEEEE;
+  --rtc-color-4: #D8D8D8;
+  --rtc-color-5: #FFFFFF;
+  --rtc-color-6: #D9D9D9;
+  --rtc-color-7: #212121;
+  --rtc-color-9: #f5f5f5;
+  --rtc-color-10: #a2a2a251;
+  --rtc-color-11: #949494;
+  --rtc-color-12: #404243;
+  --rtc-color-13: #999999;
+
+  /* COLORS FONTS */
+  --rtc-nav-color: var(--rtc-color-2);
+  --rtc-buttom-color: var(--rtc-color-7);
+  --rtc-hero-color: var(--rtc-color-5);
+  --rtc-models-color: var(--rtc-color-1);
+  --rtc-find-color: var(--rtc-color-1);
+  --rtc-discover-color: var(--rtc-color-5);
+  --rtc-tentation-color: var(--rtc-color-5);
+  --rtc-tentation-media-color: var(--rtc-color-1);
+  --rtc-footer-color: var(--rtc-color-5);
+  --rtc-miscelaneus-color: var(--rtc-color-13);
+
+  /* BACKGROUND COLORS */
+  --rtc-bg-nav: var(--rtc-color-3);
+  --rtc-bg-1: var(--rtc-color-5);
+  --rtc-bg-2: var(--rtc-color-9);
+  --rtc-bg-card: var(--rtc-color-6);
+  --rtc-bg-discover: var(--rtc-color-10);
+  --rtc-bg-scroll: var(--rtc-color-11);
+  --rtc-bg-tentation-media: var(--rtc-color-3);
+  --rtc-bg-footer-v1: var(--rtc-color-12);
+  --rtc-bg-footer-v2: var(--rtc-color-1);
+
+    /* BORDERS COLORS */
+    --rtc-nav-border: var(--rtc-color-4);
+
+    /* CARS COLORS */
+    --rtc-car-black: #000000;
+    --rtc-car-blue: #0010a1;
+    --rtc-car-light-blue: #515f91;
+    --rtc-car-red: #b20000;
+    --rtc-car-ligth-red: #ae3f3f;
+    --rtc-car-yellow: #e2c324;
+    --rtc-car-grey:#c5c5c5;
+
+    /* FONTS */
+    --rtc-font-v1: 'ABeeZee', sans-serif;
+    --rtc-font-v2: 'Abhaya Libre', sans-serif;
+
+    /* FONT SIZE */
+    --rtc-font-size-1: 12px;
+    --rtc-font-size-2: 14px;
+    --rtc-font-size-3: 16px;
+    --rtc-font-size-4: 20px;
+    --rtc-font-size-5: 24px;
+    --rtc-font-size-6: 30px;
+    --rtc-font-size-7: 32px;
+    --rtc-font-size-8: 36px;
+    --rtc-font-size-9: 40px;
+    --rtc-font-size-10: 50px;
+    --rtc-font-size-11: 70px;
+    --rtc-font-size-12: 96px;
+
+    /* DINAMIYC FONT SIZE */
+    --rtc-dn-font-1: 1vw;
+    --rtc-dn-font-2: 2vw;
+    --rtc-dn-font-5: 5vw;
+    --rtc-dn-font-6: 6vw;
+
+    /* FONT WEIGHT */
+    --rtc-font-weight: 400;
+
+    /* PADDING & MARGIN & GAP */
+    --rtc-pmg-xxs: 1px;
+    --rtc-pmg-xs: 2px;
+    --rtc-pmg-sl: 5px;
+    --rtc-pmg-md: 10px;
+    --rtc-pmg-lg: 15px;
+    --rtc-pmg-xl: 20px;
+    --rtc-pmg-xxl: 25px;
+
+    /* PADDING & MARGIN DINAMYC */
+    --rtc-dpm-size-1: 1vw;
+    --rtc-dpm-size-2: 2vw;
+    --rtc-dpm-size-3: 3vw;
+    --rtc-dpm-size-4: 4vw;
+    --rtc-dpm-size-5: 5vw;
+
+    /* BORDER - RADIUS 14*/
+    --rtc-br-rad-sl: 8px;
+    --rtc-br-rad-m: 15px;
+    --rtc-br-rad-l: 20px;
+    --rtc-br-rad-xl: 45px;
+    
+}
+
+/*?     CONFIGURACION GENERAL       */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: var(--rtc-font-weight);
+}
+
+body {
+  font-family: var(--rtc-font-v1);
+  color: var(--rtc-color-2);
+  font-size: var(--rtc-font-size-1);
+  background-color: var(--rtc-bg-1);
+}
+
+a, h1, h2, h3, h4, h5, h6 {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.img-background {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+button {
+  height: 45px;
+  width: 100px;
+  background-color: var(--rtc-bg-1);
+  font-size: var(--rtc-font-size-1);
+  color: var(--rtc-button-color);
+  border-radius: var(--rtc-br-rad-xl);
+  border:none;
+  cursor: pointer;
+}
+
+/*?     -----------     HEADER Y BARRA DE NAVEGACION     -----------     */
+
+header nav {
+  position: fixed;
+  height: 50px;
+  background-color: var(--rtc-bg-nav);
+  border-bottom: 1px solid var(--rtc-nav-border);
+  width: 100%;
+  justify-content: space-between;
+  color: var(--rtc-nav-color);
+}
+
+header nav ul {
+  align-items: center;
+}
+
+header nav .left-nav {
+  max-width: 440px;
+  justify-content: space-evenly;
+}
+
+header nav .right-nav {
+  max-width: 130px;
+  justify-content: space-evenly;
+}
+
+header nav li, header nav a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav a {
+  padding: 0 var(--rtc-pmg-xl);
+}
+
+header .left-nav > li:first-child {
+  min-width: 72px;
+  max-width: 114px;
+  flex-grow: 1;
+}
+
+header svg.logo {
+  width: 30px;
+  height: 30px;
+}
+
+header a:hover {
+  color: var(--rtc-bg-nav);
+  background-color: var(--rtc-nav-color);
+}
+
+.menu {
+  display: none;
+}
+
+/*?     -----------     SECCION HERO     -----------     */
+
+section.hero {
+  margin-top: 50px;
+  max-height: 549px;
+  min-height: 207px;
+  background-image: url(assets/img/BG/hero.jpg);
+  padding: var(--rtc-dpm-size-5) var(--rtc-dpm-size-3);
+  color: var(--rtc-hero-color);
+}
+
+section.hero > h1 {
+  font-size: clamp(var(--rtc-font-size-5), var(--rtc-dn-font-5), var(--rtc-font-size-11));
+  margin-bottom: var(--rtc-dpm-size-1);
+}
+
+section.hero h2 {
+  font-size: clamp(var(--rtc-font-size-1), var(--rtc-dn-font-2), var(--rtc-font-size-2))
+}
+
+/*?     -----------     SECCION MODELS     -----------     */
+
+section.models {
+  height: auto;
+  padding: var(--rtc-pmg-xl);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  gap: var(--rtc-pmg-xl);
+}
+
+section.models .card {
+  width: 46vw;
+  max-width: 636px;
+  min-width: 354px;
+  height: 36vw;
+  max-height: 556px;
+  min-height: 335px;
+  background-color: var(--rtc-bg-card);
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--rtc-pmg-xxl);
+  border-radius: var(--rtc-br-rad-sl);
+}
+
+section.models .card div {
+  height: auto;
+}
+
+section.models article > div:first-child {
+  color: var(--rtc-models-color);
+}
+
+section.models .card h2 {
+  font-size: var(--rtc-font-size-6);
+  height: auto;
+  margin-bottom: var(--rtc-pmg-lg);
+}
+
+section.models .card p {
+  font-size: var(--rtc-font-size-3);
+}
+
+section.models img {
+  width: 70%;
+  min-width: 240px;
+  align-self: center;
+}
+
+section.models .card-bottom {
+  width: 100%;
+  justify-content: space-between;
+}
+
+section.models .colors-car {
+  width: auto;
+  justify-content: flex-end;
+}
+
+section.models .shadow {
+  min-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+section.models .shadow:hover{
+  box-shadow: 0 0 1px 1px var(--rtc-color-1);
+}
+
+section.models .colors-car svg {
+  width: 33px;
+  cursor: pointer;
+}
+
+/* SECTION MODELS -- COLORS CAR */
+.car-black {
+  color: var(--rtc-car-black);
+}
+
+.car-red{
+  color: var(--rtc-car-red);
+}
+
+.car-grey {
+  color: var(--rtc-car-grey);
+}
+
+.car-blue {
+  color: var(--rtc-car-blue);
+}
+
+.car-yellow {
+  color: var(--rtc-car-yellow);
+}
+
+.car-light-blue {
+  color: var(--rtc-car-light-blue);
+}
+
+.car-light-red {
+  color: var(--rtc-car-ligth-red);
+}
+
+/*?     -----------     SECCION DEALERS     -----------     */
+
+section.dealers .find {
+  width: 100%;
+  max-height: 303px;
+  background-color: var(--rtc-bg-2);
+  padding: var(--rtc-pmg-xl);
+}
+
+section.dealers .find h2 {
+  width: 60%;
+  min-width: 342px;
+  font-family: var(--rtc-font-v2);
+  font-size: clamp(var(--rtc-font-size-9), var(--rtc-dn-font-6), var(--rtc-font-size-12));
+  color: var(--rtc-find-color);
+}
+
+section.dealers .find p {
+  width: 40%;
+  min-width: 298px;
+  font-size: var(--rtc-font-size-5);
+}
+
+section.dealers .map {
+  max-height: 793px;
+  min-height: 329px;
+  background-image: url(assets/img/BG/map.png);
+  padding: var(--rtc-pmg-xl);
+}
+
+section.dealers .discover {
+  height: 275px;
+  width: 466px;
+  background-color: var(--rtc-bg-discover);
+  margin: auto 0;
+  border-radius: 14px;
+  padding: var(--rtc-pmg-xl);
+  justify-content: space-between;
+  font-size: var(--rtc-font-size-10);
+}
+
+section.dealers .discover > p {
+  color: var(--rtc-discover-color);
+}
+
+section.dealers .discover button {
+  width: 254px;
+}
+
+/*?     -----------     SECCION ACCESORIES     -----------     */
+
+section.accesories {
+  background-color: var(--rtc-bg-2);
+  width: 100%;
+  height: 40vw;
+  min-width: 375px;
+  max-height: 586px;
+  min-height: 384px;
+  padding: var(--rtc-dpm-size-2);
+  padding-top: 0px;
+}
+
+section.accesories .conteiner{
+  height: 100%;
+  width: 100%;
+  background-color: var(--rtc-bg-2);
+  overflow-x: scroll;
+}
+
+section.accesories .conteiner::-webkit-scrollbar {
+  background-color: var(--rtc-bg-card);
+  border-radius: var(--rtc-br-rad-l);
+  height: 15px;
+}
+
+section.accesories .conteiner::-webkit-scrollbar-thumb {
+  background-color: var(--rtc-bg-scroll);
+  border-radius: var(--rtc-br-rad-l);
+  border: 3px solid var(--rtc-bg-card);
+}
+
+section.accesories .items {
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 2vw;
+}
+
+section.accesories .items-card{
+  width: 45vw;
+  height: 90%;
+  max-width: 540px;
+  max-height: 490px;
+  min-width: 310px;
+  min-height: 335px;
+  border-radius: var(--rtc-br-rad-sl);
+  background-color: var(--rtc-bg-card);
+  justify-content: space-between;
+  padding: var(--rtc-dpm-size-2);
+}
+
+section.accesories h3 {
+  font-size: var(--rtc-font-size-6);
+}
+
+section.accesories img {
+  align-self: center;
+  width: 90%;
+  max-width: 480px;
+  min-width: 288px;
+  height: 70%;
+  min-height: 191px;
+  max-height: 270px;
+}
+
+/*?     -----------     SECCION TENTATION     -----------     */
+
+section.tentation {
+  max-height: 791px;
+  min-height: 375px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.6) 100%), 
+  url('assets/img/BG/red-car.png');
+  color: var(--rtc-tentation-color);
+  justify-content: flex-end;
+  padding-left: var(--rtc-dpm-size-5);
+  padding-bottom: var(--rtc-dpm-size-3);
+}
+
+section.tentation > div:first-child{
+  display: none;
+}
+
+section.tentation h3 {
+  font-size: clamp(var(--rtc-font-size-9), var(--rtc-dn-font-5), var(--rtc-font-size-10));
+  margin-bottom: var(--rtc-dpm-size-1);
+}
+
+section.tentation p {
+  max-width: 291px;
+  font-size: clamp(var(--rtc-font-size-1), var(--rtc-dn-font-2), var(--rtc-font-size-2));
+  line-height: 21px;
+}
+
+/*?     -----------     SECCION PROGRAMME     -----------     */
+section.programme{
+  background-color: var(--rtc-bg-1);
+  width: 100%;
+  aspect-ratio: 16 /9;
+  max-height: 816px;
+  align-content: center;
+}
+
+section.programme article {
+  justify-content: space-evenly;
+}
+
+section.programme article div {
+  width: 45%;
+  justify-content: center;
+  gap: var(--rtc-dpm-size-3);
+}
+
+section.programme h2 {
+  font-size: clamp(var(--rtc-font-size-7), var(--rtc-dn-font-5), var(--rtc-font-size-10));
+  max-width: 580px;
+}
+
+section.programme p {
+  max-width: 460px;
+  font-size: var(--rtc-font-size-2);
+}
+
+section.programme a {
+  font-size: var(--rtc-font-size-3);
+}
+
+section.programme img {
+  width: 45%;
+  height: auto;
+  max-width: 635px;
+  max-height: 635px;
+}
+
+/*?     -----------     FOOTER     -----------     */
+footer {
+  width: 100%;
+  font-size: var(--rtc-font-size-2);
+  color: var(--rtc-footer-color);
+}
+
+footer button {
+  color: var(--rtc-color-1);
+}
+
+footer > div:first-child {
+  background-color: var(--rtc-bg-footer-v1);
+  min-height: 130px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: var(--rtc-font-size-3);
+  gap: var(--rtc-pmg-xxl);
+  padding: var(--rtc-pmg-xl);
+}
+
+footer > div:first-child p{
+  max-width: 656px;
+}
+
+footer > div:first-child button {
+  width: 200px;
+  min-width: 131px;
+}
+
+footer > div:last-child {
+  padding: var(--rtc-dpm-size-5);
+  background-color: var(--rtc-bg-footer-v2);
+  width: 100%;
+  max-height: 819px;
+  aspect-ratio: 16/9;
+  align-items: center;
+  gap: var(--rtc-dpm-size-4);
+}
+
+footer .subscription {
+  border: 1px solid var(--rtc-footer-color);
+  border-radius: var(--rtc-br-rad-xl);
+  width: 40%;
+  min-width: 360px;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+  padding-left: var(--rtc-pmg-xl);
+}
+
+footer .subscription input {
+  background-color: var(--rtc-bg-footer-v2);
+  border: none;
+  color: var(--rtc-footer-color);
+  caret-color: white;
+}
+
+footer .subscription input:focus {
+  background-color: var(--rtc-bg-footer-v2);
+  outline: none;
+}
+
+footer input.police {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0 var(--rtc-pmg-md);
+  width: 20px;
+  height: 20px;
+  background: var(--rtc-bg-footer-v2);
+  border: 1px solid var(--rtc-color-5);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+footer input.police:checked {
+  background-color: var(--rtc-bg-footer-v2);
+}
+
+footer input.police:checked::after {
+  content: "✔";
+  font-size: 16px;
+  color: #FFFFFF;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: normal;
+}
+
+footer .social-media {
+  gap: var(--rtc-dpm-size-3);
+}
+
+footer .social-media img{
+  height: 30px;
+}
+
+footer .miscelaneus{
+  width: 60%;
+  justify-content: space-between;
+  gap: var(--rtc-pmg-xl);
+  color: var(--rtc-miscelaneus-color);
+}
+
+footer .miscelaneus ul li:first-child{
+  color: var(--rtc-footer-color);
+  font-size: var(--rtc-font-size-4);
+  padding-bottom: var(--rtc-dpm-size-2);
+}
+
+
+
+@media screen and (max-width: 582px) {
+ .menu {
+  display: flex;
+ }
+
+ ul.left-nav > *:not(:first-child) {
+  display: none;
+}
+
+.left-nav { 
+  max-width: 72px;
+}
+
+.right-nav {
+  min-width: 186px;
+}
+
+.hero {
+  justify-content: flex-end;
+}
+
+section.models {
+  padding: var(--rtc-pmg-sl);
+  gap: var(--rtc-pmg-sl);
+}
+
+article.card > div:first-child {
+  width: 100%;
+  align-items: center;
+}
+
+section.models .card-bottom {
+  justify-content: center;
+}
+.colors-car {
+  display: none;
+}
+
+.find {
+  align-items: center;
+}
+
+.find > * {
+  text-align: center;
+}
+
+section.dealers .discover {
+  width: 340px;
+  height: 265px;
+  font-size: var(--rtc-font-size-8);
+  text-align: center;
+  margin: auto;
+}
+
+.discover button {
+  align-self: center;
+}
+
+.items-card{
+  align-items: center;
+}
+
+section.tentation {
+  padding: 0;
+}
+
+section.tentation > div:first-child{
+  display: flex;
+  width: 100%;
+  height: 50%;
+  background-image: url('assets/img/BG/red-car-2.jpg');
+}
+
+section.tentation {
+  background-image: none;
+  background-color: var(--rtc-bg-tentation-media);
+  color: var(--rtc-tentation-media-color);
+  align-items: center;
+}
+
+section.tentation article {
+  padding: var(--rtc-dpm-size-5);
+}
+section.tentation h2 {
+  font-size: var(--rtc-font-size-4);
+  align-self: center;
+  margin-bottom: var(--rtc-pmg-lg);
+}
+
+section.tentation p {
+  font-size: var(--rtc-font-size-2);
+}
+
+section.programme article {
+  flex-direction: column;
+  align-items: center;
+  padding: var(--rtc-dpm-size-4);
+  gap: var(--rtc-pmg-xl);
+}
+
+section.programme article div {
+  display: contents;
+}
+
+section.programme article div h2 {
+  text-align: center;
+  order: 0;
+}
+
+section.programme article div p {
+  order: 2;
+  text-align: center;
+}
+
+section.programme article div a {
+  order: 3;
+}
+
+section.programme article img {
+  order: 1;
+  min-width: 339px;
+  min-height: 378px;
+}
+
+footer > div:first-child {
+  flex-direction: column;
+  max-height: 235px;
+  align-items: center;
+  text-align: center;
+}
+
+footer .miscelaneus{
+  width: 30%;
+  flex-direction: column;
+}
+}
